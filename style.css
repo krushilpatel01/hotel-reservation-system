@@ -39,7 +39,6 @@ body {
     .hero {
         height: 810px;
     }
-
 }
 
 @media screen and (min-width:451px) and (max-width:768px) {
@@ -55,10 +54,9 @@ body {
 }
 
 @media screen and (min-width:1025px) {
-    .hero{
+    .hero {
         height: 800px;
     }
-    
 }
 
 .hero .black-box {
@@ -78,7 +76,6 @@ nav {
 
 @media screen and (max-width:768px) {
     nav {
-        /* moved to here */
         background-color: var(--light);
     }
 }
@@ -137,11 +134,10 @@ nav {
     line-height: initial;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
     .navbar-nav {
         background-color: var(--light);
     }
-
 
     .navbar-nav .nav-link {
         text-align: center;
@@ -166,6 +162,122 @@ header {
     margin: 0 auto;
 }
 
+/* ✨ Added Responsive Flex Direction */
+@media screen and (max-width:768px) {
+    .header-class {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .header-class {
+        flex-direction: row;
+    }
+}
+
+.heading-section {
+    width: 100%;
+    align-items: center;
+    padding-right: 40px;
+    z-index: 0;
+    /* ✨ Removed position: absolute; */
+}
+
+.main-heading {
+    font-size: 62px;
+    font-weight: 1000;
+    font-family: var(--title-font);
+    color: var(--light);
+}
+
+.sub-heading {
+    font-family: var(--text-font);
+    color: var(--light);
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:450px) {
+    .heading-section {
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .main-heading {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+    .sub-heading {
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width:451px) and (max-width:768px) {
+    .heading-section {
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .main-heading {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    .sub-heading {
+        text-align: justify;
+    }
+}
+
+.img-section {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+@media screen and (max-width:768px) {
+    .img-section {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.img-section img {
+    width: 90%;
+    height: 90%;
+    animation: rotate 25s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--light);
+        z-index: 999;
+    }
+}
+
+
+
+/* main page header css */
+
+
+/* other page header css */
 .hero-pages {
     width: 100vw;
     height: 400px;
@@ -206,91 +318,7 @@ header {
     color: var(--light);
 }
 
-.heading-section {
-    align-items: center;
-    padding-right: 40px;
-}
-
-.main-heading {
-    font-size: 62px;
-    font-weight: 1000;
-    font-family: var(--title-font);
-    color: var(--light);
-}
-
-.sub-heading {
-    font-family: var(--text-font);
-    color: var(--light);
-    font-size: 16px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-@media screen and (max-width:450px) {
-    .heading-section {
-        padding: 10px;
-        margin: 0 auto;
-    }
-
-    .main-heading {
-        font-size: 30px;
-        margin-top: 50px;
-    }
-
-    .sub-heading {
-        text-align: justify;
-    }
-
-}
-
-@media screen and (min-width:451px) and (max-width:768px) {
-    .heading-section {
-        padding: 10px;
-        margin: 0 auto;
-    }
-
-    .main-heading {
-        font-size: 40px;
-        margin-top: 50px;
-    }
-
-    .sub-heading {
-        text-align: justify;
-    }
-}
-
-.img-section {
-    width: 50%;
-    height: 50%;
-    text-align: center;
-    /* overflow: hidden; */
-    padding-top: 30px;
-}
-
-@media screen and (max-width:768px) {
-    .img-section {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.img-section img {
-    width: 90%;
-    height: 90%;
-    animation: rotate 25s infinite linear;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-        /* Start at 0 degrees */
-    }
-
-    to {
-        transform: rotate(360deg);
-        /* End at 360 degrees */
-    }
-}
+/* main header section over  */
 
 .services-section {
     width: 100%;
