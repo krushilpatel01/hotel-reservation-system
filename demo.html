@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CK - Single Page Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: #222;
+            color: white;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            background: white;
+            margin-bottom: 20px;
+        }
+
+        section:nth-child(even) {
+            background: #fafafa;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            background: #4CAF50;
+            color: white;
+            padding: 100px 20px;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1 1 45%;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .portfolio .card {
+            flex: 1 1 45%;
+        }
+
+        .services .card {
+            flex: 1 1 45%;
+        }
+
+        /* Testimonials */
+        .testimonial {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            background: #eee;
+            padding: 30px;
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        /* Contact */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* btn  */
+        .btn {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .slide-up {
+            animation: slideUp 0.6s ease forwards;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* box  */
+        .box {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid {
+                flex-direction: column;
+            }
+
+            .card {
+                flex: 1 1 100%;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <h1>CK Tech</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" data-aos="fade-up">
+        <div class="container">
+            <h2>Welcome to CK Tech Agency</h2>
+            <p>Creative solutions for modern websites.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" data-aos="fade-right">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We specialize in designing and developing visually appealing and fully functional websites tailored to
+                your business needs.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" data-aos="fade-left">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="grid services">
+                <div class="card">Web Design</div>
+                <div class="card">Web Development</div>
+                <div class="card">Digital Marketing</div>
+                <div class="card">SEO Optimization</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" data-aos="zoom-in">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="grid portfolio">
+                <div class="card">Project 1</div>
+                <div class="card">Project 2</div>
+                <div class="card">Project 3</div>
+                <div class="card">Project 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" data-aos="fade-up">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>“CK Tech built us a stunning website, fast and mobile-ready!”</p>
+                <span>- Happy Client</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <button class="btn">Hover Me</button>
+
+        <div class="box">I fade in!</div>
+
+        <div class="content slide-up">Welcome</div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CK Tech. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+</html>
