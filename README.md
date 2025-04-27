@@ -1,5 +1,7 @@
 # Hotel Lunch-Dinner-Breakfast Services Website
 
+Get Live Preview : https://krushilpatel01.github.io/hotel-reservation-system/
+
 This is a simple and elegant hotel website where customers can:
 - Reserve lunch, dinner, and breakfast
 - Explore special offers and services
