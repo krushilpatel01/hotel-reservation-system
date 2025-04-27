@@ -74,7 +74,7 @@ nav {
     z-index: 999;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     nav {
         background-color: var(--light);
     }
@@ -122,7 +122,7 @@ nav {
     background-color: var(--light);
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .navbar-toggler {
         background-color: var(--main-color);
     }
@@ -134,7 +134,7 @@ nav {
     line-height: initial;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .navbar-nav {
         background-color: var(--light);
     }
@@ -177,7 +177,7 @@ header {
 }
 
 .heading-section {
-    width: 100%;
+    /* width: 100%; */
     align-items: center;
     padding-right: 40px;
     z-index: 0;
@@ -231,6 +231,12 @@ header {
     }
 }
 
+@media screen and (min-width:769px) and (max-width:1023px) {
+    .heading-section {
+        width: 50%;
+    }
+}
+
 .img-section {
     width: 50%;
     height: 50%;
@@ -261,7 +267,7 @@ header {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .navbar-collapse {
         position: absolute;
         top: 100%;
@@ -269,6 +275,7 @@ header {
         width: 100%;
         background-color: var(--light);
         z-index: 999;
+        padding-bottom: 10px;
     }
 }
 
@@ -935,7 +942,6 @@ footer .f-title::after {
 .input-with-button input {
     width: 100%;
     padding: 10px 100px 10px 10px;
-    /* right side padding for button */
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 6px;
@@ -973,6 +979,12 @@ footer .f-title::after {
         top: 100%;
         transform: translateY(50%);
 
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .input-with-button {
+        width: 100%;
     }
 }
 
